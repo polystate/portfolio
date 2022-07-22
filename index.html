@@ -12,10 +12,10 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
                 <li><a href="technologies.html">Technologies</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
             </ul>
         </nav>
     </header>
@@ -23,12 +23,11 @@
     <main>
         <section id="intro">
             <div class="profile">
-            <h1 class="name" id="first">Dock
-                <br><span class="name" id="last">Adams</span>
-            </h1>
-            <div class="bg-img"></div>
-            <!-- <img src="images/dock.jpg" class="main-img" alt="Dock Adams"> -->
-            </div>
+                <h1 class="name" id="first">Dock
+                    <span class="name" id="last">Adams</span>
+                </h1>
+                <div class="bg-img"></div>
+                </div>
             </div>
             <div id="intro-text"
                 <p id="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam facere repellendus, ad voluptatem, ab suscipit, eius officiis quibusdam nemo laudantium consequatur similique ex nulla fugit! Atque, alias distinctio. Perspiciatis.
@@ -41,11 +40,11 @@
     </main>
 
     <section id="tech">
-        <h2>List of Technologies</h2>
+        <h2 class="sect-header">List of Technologies</h2>
     </section>
     
     <section id="projects">
-        <h2>List of Projects</h2>
+        <h2 class="sect-header">List of Projects</h2>
         <!-- make it so when you click on it does async await, loading, then takes up the full window-->
         <div class="project-grid">
             <iframe src="" frameborder="0" class="frame">Frame</iframe>
@@ -57,6 +56,22 @@
         </div>
     </section>
     
+    <section id="contact-form">
+        <h2 class="sect-header">Contact Form</h2>
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <div class="button-container">
+                <input class="form-button" type="submit" value="Submit">
+                <input class="form-button" type="reset" value="Reset">
+            </div>
+        </form>
+    </section>
+
     <footer>
         <p>Let me know if I can assist you</p>
         <div class="social-media">
@@ -65,7 +80,12 @@
             <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a>
         </div>
     </footer>
-    
+    <div class="closer">
+        <p>Created by polystate</p>
+    </div>
+
     <script src="script.js"></script>
 </body>
+    
 </html>
+
