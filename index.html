@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1a64cfcf6c.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <title>Portfolio Page</title>
 </head>
@@ -13,9 +15,9 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <!-- <li><a href="about.html">About</a></li> -->
-                <li><a href="technologies.html">Technologies</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#tech">Technologies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact-form">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -33,58 +35,66 @@
                 <p id="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam facere repellendus, ad voluptatem, ab suscipit, eius officiis quibusdam nemo laudantium consequatur similique ex nulla fugit! Atque, alias distinctio. Perspiciatis.
                 Magnam provident veritatis temporibus sed voluptatibus? Provident fugit porro doloribus ad odio corrupti laudantium dolore quidem, ex suscipit impedit beatae maxime et animi numquam excepturi, nulla enim mollitia deserunt velit.
                 Aspernatur quidem beatae rem quisquam repellendus ut provident ullam mollitia dolores, ab aliquam accusamus nesciunt doloremque aperiam inventore itaque assumenda, nemo eius eum dolore non recusandae nihil, unde perferendis? Doloribus?
-                Nam qui eum reprehenderit in perspiciatis porro nulla exercitationem temporibus alias laudantium animi non impedit nesciunt asperiores, amet sint rerum obcaecati tempore sunt blanditiis delectus id molestias odit? Eaque, aliquam.
-                Ab quas corporis nostrum quaerat, perspiciatis alias cumque minus sed obcaecati et eius omnis repudiandae consequatur illum inventore natus accusamus id animi. Ipsum itaque fugit vero beatae, sint minima ipsam?</p>
+                Nam qui eum reprehenderit in perspiciatis porro nulla exercitationem temporibus alias laudantium animi non impedit nesciunt asperiores, amet sint rerum obcaecati tempore sunt blanditiis delectus id molestias odit?</p>
             </div>
         </section>
     </main>
 
     <section id="tech">
-        <h2 class="sect-header">List of Technologies</h2>
+        <h2 class="sect-header">Technologies</h2>
+        <div class="icon-container">
+            <!-- <a href="https://reactjs.org" target="#"><i class="tech-icon fa fa-camera-retro fa-3x"></i></a>
+            <a href="https://reactjs.org" target="#"><i class="tech-icon fa-brands fa-react fa-3x"></i></a>
+            <a href="https://reactjs.org" target="#"><i class="tech-icon fa-solid fa-rectangle-ad fa-3x"></i></a>
+            <a href="https://reactjs.org" target="#"><i class="tech-icon fa-brands fa-react fa-3x"></i></a>
+            <a href="https://reactjs.org" target="#"></a> -->
+        </div>
     </section>
     
     <section id="projects">
-        <h2 class="sect-header">List of Projects</h2>
+        <h2 class="sect-header">Projects</h2>
         <!-- make it so when you click on it does async await, loading, then takes up the full window-->
         <div class="project-grid">
-            <iframe src="" frameborder="0" class="frame">Frame</iframe>
-            <iframe src="" frameborder="0" class="frame">Frame</iframe>
-            <iframe src="" frameborder="0" class="frame">Frame</iframe>
-            <iframe src="" frameborder="0" class="frame">Frame</iframe>
-            <iframe src="" frameborder="0" class="frame">Frame</iframe>
-            <iframe src="" frameborder="0" class="frame">Frame</iframe>
+            <div class="project-card"></div>
+            <div class="project-card"></div>
+            <div class="project-card"></div>
+            <div class="project-card"></div>
+            <div class="project-card"></div>
+            <div class="project-card"></div>
         </div>
     </section>
     
     <section id="contact-form">
         <h2 class="sect-header">Contact Form</h2>
-        <form action="">
+        <form action="https://formsubmit.co/d63588e0e0964b3ce6f1dc884a56cd6c" method="POST">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" class="textField" name="name" id="name" required>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" class="textField" name="email" id="email" required>
             <label for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea name="message" id="message" class="textField" cols="30" rows="10" required></textarea>
             <div class="button-container">
-                <input class="form-button" type="submit" value="Submit">
-                <input class="form-button" type="reset" value="Reset">
+                <input class="form-button" id="submit" type="submit" value="Submit">
+                <input class="form-button" id="reset" type="reset" value="Reset">
             </div>
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
         </form>
     </section>
 
     <footer>
-        <p>Let me know if I can assist you</p>
-        <div class="social-media">
-            <a href="https://www.github.com/"><img src="images/github.png" alt="github"></a>
-            <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="linkedin"></a>
-            <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a>
+        <div class="footer-assist">
+            <p>Let me know if I can assist you</p>
+            <div class="footer-icon-container">
+                <a href="https://www.whatsapp.com/" target="#"><i class="footer-icon fa fa-whatsapp fa-3x" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" target="#"><i class="footer-icon fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+                <a href="https://www.skype.com/" target="#"><i class="footer-icon fa fa-skype fa-3x" aria-hidden="true"></i></a>
+                <a href="https://www.github.com/polystate" target="#"><i class="footer-icon fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+            </div>
         </div>
+    
+        <div class="closer"></div>
     </footer>
-    <div class="closer">
-        <p>Created by polystate</p>
-    </div>
-
-    <script src="script.js"></script>
+    
 </body>
     
 </html>

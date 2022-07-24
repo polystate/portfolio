@@ -4,6 +4,7 @@
     --primary-color: rgb(6, 6, 59);
     /* --primary-text: rgb(6,6,59,0.801); */
     --secondary-color: rgba(218, 189, 27, 0.801); 
+    --secondary-no-opacity: rgb(218,189,27);
     --tertiary-color: rgb(61, 61, 218);
     --main-text-color: rgb(245, 245, 245);
     --main-spacing: 2.5rem;
@@ -32,6 +33,7 @@ body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: 0.1rem;
     line-height: 2rem;
+    width: auto;
     /*line height?*/
     /* line-height: 1.75rem; */
     /*add letter spacing somewhere and adjust font weights for importance*/
@@ -41,9 +43,13 @@ body{
 
 nav{
     /* border: 1px solid white; */
+    position: fixed;
+    top: 0;
+    width: 100%;
     padding: var(--main-spacing);
     background: var(--secondary-color);
     box-shadow: 0 0.1rem 0.5rem black;
+    z-index: 99;
 }
 
 nav ul{
@@ -68,6 +74,7 @@ nav a:hover{
 
 #intro{
     padding: var(--main-spacing);
+
 }
 
 section{
@@ -128,21 +135,50 @@ section{
     box-shadow: 0 0.1rem 0.5rem black;
 }
 
+
+
+.tech-icon{
+    color: white;
+}
+
+/*Project Section*/
+
 #projects{
     background: var(--secondary-color);
     box-shadow: 0 0.1rem 0.5rem black;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 90%, 0% 95%);
 }
 
-/*Project Section*/
-
 #projects h2{
     color: var(--primary-color);
-    font-weight: 800;
+    font-size: 2rem;
 }
 
 section{
     margin-top: var(--main-spacing);
+}
+
+.project-grid{
+    padding: var(--main-spacing);
+    margin: var(--main-spacing);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--main-spacing);
+    justify-items: center;
+    align-items: center;
+}
+
+.project-card{
+    height: 25vh;
+    width: 15vw;
+    background: var(--main-text-color);
+    box-shadow: 0 0.1rem 0.5rem black;
+}
+
+.project-card:hover{
+    border: 3px solid var(--primary-color);
+    cursor: pointer;
 }
 
 /*Contact Form*/
@@ -171,9 +207,21 @@ form > *{
     border: none;
 }
 
+.textField{
+    width: 100%;
+    padding: calc(var(--main-spacing)/1.5);
+    font-size: 1.25rem;
+    font-weight: 600;
+    background: var(--main-text-color);
+    color: var(--primary-color);
+    outline-color: var(--primary-color);
+    box-shadow: 0 0.05rem 0.25rem black;
+}
+
 label{
     color: var(--primary-color);
     font-weight: 800;
+    font-size: 1.1rem;
 }
 
 #message{
@@ -183,23 +231,35 @@ label{
     /* box-shadow: 0 0.1rem 0.5rem black; */
 }
 
+
+
 .button-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: var(--main-spacing);
     gap: var(--main-spacing);
+    width: 100%;
 }
 
 .form-button{
     border: 1px solid var(--main-text-color);
-    /* box-shadow: 0 0.1rem 0.5rem black; */
     font-size: 1rem;
     padding: calc(var(--main-spacing)/2);
     border: none;
-    color: var(--primary-color);
     font-weight: 700;
     cursor: pointer;
+    background: var(--primary-color);
+    color: var(--main-text-color);
 }
+
+.form-button:hover{
+    background: var(--primary-color);
+    color: var(--main-text-color);
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+
 
 
 
@@ -212,20 +272,56 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: var(--main-spacing);
     line-height: var(--main-spacing);
+}
+
+footer p{
+    font-size: 1.15rem;
+    font-weight: 500;
 }
 
 .closer{
     display: flex;
     justify-content: center;
     padding: var(--main-spacing);
+    background: var(--primary-color);
+    width: 100%;
+    height: 100%;
 }
 
 /* Target HTML Elements */
 
 .sect-header{
     text-align: center;
+    font-size: 1.65rem;
+    font-weight: 800;
+}
+
+/* Icons */
+
+.icon-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--main-spacing);
+}
+
+.fa{
+    color: var(--primary-color);
+}
+
+.footer-assist{
+    padding: var(--main-spacing);
+}
+
+.footer-icon-container{
+    display: flex;
+    justify-content: center;
+    margin-top: calc(var(--main-spacing)/2);
+    gap: var(--main-spacing);
+}
+
+.footer-icon{
+    color: var(--main-text-color);
 }
 
 /*Media Queries*/
@@ -233,6 +329,25 @@ footer{
 @media(max-width: 280px){
     html{
         font-size: 62.5%;
+        overflow-x: hidden;
+        /* width: 100%; */
+    }
+    body{
+        overflow-x: hidden;
+        /* position: relative; */
+    }
+    #projects{
+        height: 100vh;
+    }
+    .project-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin: 0 auto;
+        margin-bottom: calc(var(--main-spacing)*2);
+    }
+    .project-card{
+        height: 22vh;
+        width: 30vw;
     }
 }
 
