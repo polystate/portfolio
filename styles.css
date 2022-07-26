@@ -41,6 +41,8 @@ body{
 
 /*Nav*/
 
+
+
 nav{
     /* border: 1px solid white; */
     position: fixed;
@@ -74,7 +76,7 @@ nav a:hover{
 
 #intro{
     padding: var(--main-spacing);
-
+    margin-top: calc(var(--main-spacing)*4.5);
 }
 
 section{
@@ -124,7 +126,7 @@ section{
     /* max-height: 24rem; */
     max-height: 42em;
     /* max-height: 62vh; */
-    overflow-y: scroll;
+    overflow-y: auto;
     /*max-height can be viewport height or vh or make whole header section some vh*/
 }
 
@@ -174,11 +176,13 @@ section{
     width: 15vw;
     background: var(--main-text-color);
     box-shadow: 0 0.1rem 0.5rem black;
+    transition: all 0.3s ease-in-out;
 }
 
 .project-card:hover{
-    border: 3px solid var(--primary-color);
+    /* border: 3px solid var(--primary-color); */
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 /*Contact Form*/
@@ -323,6 +327,60 @@ footer p{
 .footer-icon{
     color: var(--main-text-color);
 }
+
+/* .arrow-container{
+    border: 1px solid white;
+    height: calc(var(--main-spacing)*2);
+    margin: var(--main-spacing);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.circle-container{
+    /* border: 1px solid white; */
+    border-radius: 50%;
+    background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+    width: 10%;
+    height: 50%;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--main-spacing) auto;
+    padding: var(--main-spacing);
+    transition: all 0.6s ease-in-out;
+}
+
+.arrow{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation-name: arrowUp;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes arrowUp{
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+}
+
+.circle-container:hover{
+    background: linear-gradient(to top, var(--secondary-color), var(--primary-color));
+    /* transform: translateY(-5px) */
+}
+
+/* .circle-container:active{
+    
+} */
 
 /*Media Queries*/
 

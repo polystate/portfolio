@@ -1,21 +1,23 @@
+const body = document.querySelector("body");
+const arrows = document.querySelectorAll(".circle-container");
+
 const nav = document.querySelector("nav");
+//nav heihgt is nav.clientHeight;
+//offsetHeight for height + padding and border
 let userScroll_Y = window.scrollY;
+let introText = document.getElementById("intro-text");
 window.addEventListener("scroll", () => {
-    (userScroll_Y > 528) ? nav.style = "display: none;" : nav.style = "display: visible";
+    // console.log(window.scrollY);
+    (userScroll_Y > 667) ? nav.style = "display: none;" : nav.style = "display: visible;";
+    if(window.scrollY >= 737 && window.scrollY < 1510){
+        // console.log('insert up arrow')
+        
+    }
     userScroll_Y = window.scrollY;
 })
 
-const submit = document.getElementById('submit');
-const reset = document.getElementById('reset');
-const inputs = document.querySelectorAll('.mailTo');
-// submit.addEventListener('click', function(e){
-//     e.preventDefault();
-//     inputs.forEach((input, i) => {
-//         const name = inputs[0].value;
-//         const email = inputs[1].value;
-//         const message = inputs[2].value;
-//         console.log(name, email, message);
-//         // window.open(`mailto:dockadams333@gmail.com?subject=test&body=${message}`);
-//     })
-// });
+arrows.forEach((arrow) => arrow.addEventListener('click',function(e){
+    console.log('arrow clicked');
+    window.scroll({top: 0, behavior: 'smooth'});
+}))
 
