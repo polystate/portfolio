@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1a64cfcf6c.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
-    <title>Portfolio Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Dock Adams</title>
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="about.html">About</a></li> -->
                 <li><a href="#tech">Technologies</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact-form">Contact</a></li>
@@ -33,38 +34,24 @@
             </div>
             <div id="intro-text"
                 <p id="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam facere repellendus, ad voluptatem, ab suscipit, eius officiis quibusdam nemo laudantium consequatur similique ex nulla fugit! Atque, alias distinctio. Perspiciatis.
-                Magnam provident veritatis temporibus sed voluptatibus? Provident fugit porro doloribus ad odio corrupti laudantium dolore quidem, ex suscipit impedit beatae maxime et animi numquam excepturi, nulla enim mollitia deserunt velit.
-                Aspernatur quidem beatae rem quisquam repellendus ut provident ullam mollitia dolores, ab aliquam accusamus nesciunt doloremque aperiam inventore itaque assumenda, nemo eius eum dolore non recusandae nihil, unde perferendis? Doloribus?
-                Nam qui eum reprehenderit in perspiciatis porro nulla exercitationem temporibus alias laudantium animi non impedit nesciunt asperiores, amet sint rerum obcaecati tempore sunt blanditiis delectus id molestias odit?</p>
+                Magnam provident veritatis temporibus sed voluptatibus? Provident fugit porro doloribus ad odio corrupti laudantium dolore quidem, ex suscipit impedit beatae maxime et animi numquam excepturi, nulla enim mollitia deserunt velit. Allow me to help turn your idea for a web application or website into a reality. Feel free to contact me if you have any inquiries about my services. Optionally, you can also include a mockup or file that contains the structure of your project, if you so choose.</p>
             </div>
         </section>
     </main>
 
     <section id="tech">
         <h2 class="sect-header">Technologies</h2>
-        <!-- <div class="arrow-container"> -->
-            <div class="circle-container">
-                <p class="arrow">↑</p>
+            <div class="default-grid">
+                <img class="tech-logo" src="/images/svelte.png" alt="Svelte Logo" />
+                <img class="tech-logo" src="/images/react.png" alt="React Logo" />
+                <img class="tech-logo" src="/images/node.png" alt="Node Logo" />
+                <img class="tech-logo" src="/images/sql.png" alt="SQL Logo" />
             </div>
-        <!-- </div> -->
-        <div class="icon-container">
-            <!-- <a href="https://reactjs.org" target="#"><i class="tech-icon fa fa-camera-retro fa-3x"></i></a>
-            <a href="https://reactjs.org" target="#"><i class="tech-icon fa-brands fa-react fa-3x"></i></a>
-            <a href="https://reactjs.org" target="#"><i class="tech-icon fa-solid fa-rectangle-ad fa-3x"></i></a>
-            <a href="https://reactjs.org" target="#"><i class="tech-icon fa-brands fa-react fa-3x"></i></a>
-            <a href="https://reactjs.org" target="#"></a> -->
-        </div>
     </section>
     
     <section id="projects">
         <h2 class="sect-header">Projects</h2>
-        <!-- <div class="arrow-container"> -->
-            <div class="circle-container">
-                <p class="arrow">↑</p>
-            </div>
-        <!-- </div> -->
-        <!-- make it so when you click on it does async await, loading, then takes up the full window-->
-        <div class="project-grid">
+        <div class="default-grid">
             <div class="project-card"></div>
             <div class="project-card"></div>
             <div class="project-card"></div>
@@ -77,9 +64,6 @@
     <section id="contact-form">
         <h2 class="sect-header">Contact Form</h2>
         <form action="https://formsubmit.co/d63588e0e0964b3ce6f1dc884a56cd6c" method="POST">
-            <div class="circle-container">
-                <p class="arrow">↑</p>
-            </div>
             <label for="name">Name</label>
             <input type="text" class="textField" name="name" id="name" required>
             <label for="email">Email</label>
@@ -88,9 +72,10 @@
             <textarea name="message" id="message" class="textField" cols="30" rows="10" required></textarea>
             <div class="button-container">
                 <input class="form-button" id="submit" type="submit" value="Submit">
+                <input class="form-button" id="upload-file" type="file" name="filename">
                 <input class="form-button" id="reset" type="reset" value="Reset">
             </div>
-            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw" style="display: none;"></i>
         </form>
     </section>
 
@@ -105,10 +90,13 @@
             </div>
         </div>
     
-        <div class="closer"></div>
+        <div class="closer">
+            <div class="circle-container">
+                <p class="arrow">↑</p>
+            </div>
+        </div>
     </footer>
     
 </body>
     
 </html>
-
