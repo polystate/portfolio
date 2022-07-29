@@ -1,0 +1,50 @@
+#tools{
+    background: var(--tertiary-color);
+    box-shadow: 0 0.1rem 0.5rem black;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.tech-logo{
+    cursor: pointer;
+    height: 25vh;
+    width: 15vw;
+}
+
+.tech-logo:hover{
+    opacity: 0.75;
+}
+
+#projects{
+    background: var(--secondary-color);
+    box-shadow: 0 0.1rem 0.5rem black;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 90%, 0% 95%);
+    height: 103vh;
+    text-align: center;
+}
+
+#projects h2{
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+section{
+    margin-top: var(--main-spacing);
+}
+
+.project-card{
+    height: 25vh;
+    width: 15vw;
+    background: var(--main-text-color);
+    box-shadow: 0 0.1rem 0.5rem black;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover{
+    /* border: 3px solid var(--primary-color); */
+    cursor: pointer;
+    transform: scale(1.1);
+}

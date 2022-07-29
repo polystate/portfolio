@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,18 @@
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/endpage.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Dock Adams</title>
 </head>
+
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#tech">Technologies</a></li>
+                <li><a href="#tools">Tools</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact-form">Contact</a></li>
             </ul>
@@ -29,7 +33,7 @@
                 <h1 class="name" id="first">Dock
                     <span class="name" id="last">Adams</span>
                 </h1>
-                <div class="bg-img"></div>
+                <div class="profile-img"></div>
                 </div>
             </div>
             <div id="intro-text"
@@ -39,8 +43,8 @@
         </section>
     </main>
 
-    <section id="tech">
-        <h2 class="sect-header">Technologies</h2>
+    <section id="tools">
+        <h2 class="sect-header">Tools</h2>
             <div class="default-grid">
                 <img class="tech-logo" src="/images/svelte.png" alt="Svelte Logo" />
                 <img class="tech-logo" src="/images/react.png" alt="React Logo" />
@@ -51,7 +55,8 @@
     
     <section id="projects">
         <h2 class="sect-header">Projects</h2>
-        <div class="default-grid">
+        <p>Currently Selected Project: </p>
+        <div class="default-grid" id="project-list">
             <div class="project-card"></div>
             <div class="project-card"></div>
             <div class="project-card"></div>
@@ -72,7 +77,7 @@
             <textarea name="message" id="message" class="textField" cols="30" rows="10" required></textarea>
             <div class="button-container">
                 <input class="form-button" id="submit" type="submit" value="Submit">
-                <input class="form-button" id="upload-file" type="file" name="filename">
+                <!-- <input class="form-button" id="upload-file" type="file" name="filename"> -->
                 <input class="form-button" id="reset" type="reset" value="Reset">
             </div>
             <i class="fa fa-spinner fa-spin fa-3x fa-fw" style="display: none;"></i>
@@ -91,9 +96,9 @@
         </div>
     
         <div class="closer">
-            <div class="circle-container">
+            <!-- <div class="circle-container">
                 <p class="arrow">↑</p>
-            </div>
+            </div> -->
         </div>
     </footer>
     
